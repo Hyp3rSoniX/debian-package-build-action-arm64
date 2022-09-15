@@ -1,14 +1,14 @@
 name: pi-topOS Docker Base Image Build
 
 on:
-  push:
-    paths:
-      - "docker_base/**"
-      - ".github/workflows/docker-build.yml"
+  workflow_dispatch:
+#    paths:
+#      - "docker_base/**"
+#      - ".github/workflows/docker-build.yml"
 
 env:
   BASE_IMAGE_FOR_LATEST: "bullseye"
-  IMAGE_NAME: "pitop/pi-top-os-deb-build"
+  IMAGE_NAME: "hyp3rsonix/pi-top-os-deb-build-arm64"
   PLATFORMS: "linux/amd64,linux/arm64,linux/arm/v7"
 
 jobs:
