@@ -99,7 +99,7 @@ async function main() {
         let platform = "linux/amd64";
         if (targetArchitecture !== "amd64") {
             core.startGroup("Package requires emulation - starting tonistiigi/binfmt")
-            platform = "linux/arm/v7";
+            platform = "linux/arm64";
             await exec.exec("docker", [
                 "run",
                 "--rm",
